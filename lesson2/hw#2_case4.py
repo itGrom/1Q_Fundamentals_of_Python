@@ -6,3 +6,10 @@
 user_list = input('Введите несколько слов, разделенных пробелом: ').split(' ')
 for i in range(len(user_list)):
     print(f'{i+1}) {user_list[i][:10]}')
+
+'''
+Вариант 2
+user_list = input('Введите несколько слов, разделенных пробелом: ').split(' ')
+for i, el in enumerate(user_list, 1):
+    print(f'{i}) {el[:10]}')
+'''
