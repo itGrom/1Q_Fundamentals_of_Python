@@ -27,3 +27,25 @@ while len(my_list) < 15: #ограничение работы цикла до 15
 
     print(f'Новый рейтинг: {my_list}')
 
+'''
+Вариант 2
+my_list = [7, 5, 3, 3, 2]
+
+print(f'Исходный рейтинг: {my_list}')
+
+while len(my_list) < 15:
+    el = int(input('Введите очередной элемент рейтинга: '))
+    for i in range(len(my_list)):
+        if i == len(my_list) - 1:
+            my_list.append(el)
+            break
+        elif el > my_list[i]:
+            my_list.insert(i,el)
+            break
+        elif el == my_list[i] and el > my_list[i+1]:
+            my_list.insert(i+1, el)
+            print(my_list[i+1])
+            break
+
+    print(f'Новый рейтинг: {my_list}')
+'''
