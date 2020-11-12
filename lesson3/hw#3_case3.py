@@ -5,7 +5,7 @@
 def my_func(a, b, c):
     num_list = [a, b, c]
     num_list.sort()
-    max_1, max_2 = num_list[1:]
+    max_1, max_2 = num_list[-2:]
     return max_1 + max_2
 
 print(f"Сумма двух наибольших аргументов равна: {my_func(32, 18, 25)}")
