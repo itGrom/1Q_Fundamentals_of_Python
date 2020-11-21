@@ -34,3 +34,16 @@ with open('hw#5_case3.txt','r') as file:
 
     print(f'Средний доход сотрудников равен {sum / cnt}')
 
+'''Вариант 3'''
+with open('hw#5_case3.txt','r', encoding='utf-8') as file: #можно в операторе open указать параметр encoding при открытии, тогда не нужны будут приседания с encode('cp1251').decode('utf-8')
+    sum = 0
+    cnt = 0
+    print(f'Оклад менее 20 тыс. имеют сотрудники:')
+    for line in file:
+        key, value = line.split(' ')
+        sum += float(value)
+        cnt += 1
+        if float(value) < 20000:
+            print(key)
+
+    print(f'Средний доход сотрудников равен {sum / cnt}')
